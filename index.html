@@ -5,7 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="小兔鲜儿官网，致力于打造全球最大的食品、生鲜电商购物平台。">
   <meta name="keywords" content="小兔鲜儿,食品,生鲜,服装,家电,电商,购物">
-  <title>小兔鲜儿-新鲜、惠民、快捷！</title>
+  <meta name="author" content="24215220205范籽雯">
+  <title>24215220205范籽雯</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     * {
@@ -324,6 +325,87 @@
       background: var(--white);
       width: 30px;
       border-radius: 5px;
+    }
+
+    /* ====== 学号姓名展示区域（新增）====== */
+    .author-showcase {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+      margin: 30px 0;
+      padding: 40px 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .author-showcase::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -10%;
+      width: 400px;
+      height: 400px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 50%;
+    }
+
+    .author-showcase::after {
+      content: '';
+      position: absolute;
+      bottom: -30%;
+      left: -5%;
+      width: 300px;
+      height: 300px;
+      background: rgba(255,255,255,0.08);
+      border-radius: 50%;
+    }
+
+    .author-content {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      color: var(--white);
+    }
+
+    .author-label {
+      font-size: 14px;
+      opacity: 0.9;
+      margin-bottom: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .author-name {
+      font-size: 48px;
+      font-weight: 800;
+      margin-bottom: 10px;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+      letter-spacing: 4px;
+    }
+
+    .author-id {
+      font-size: 24px;
+      opacity: 0.95;
+      font-weight: 300;
+      letter-spacing: 8px;
+    }
+
+    .author-divider {
+      width: 80px;
+      height: 3px;
+      background: rgba(255,255,255,0.5);
+      margin: 20px auto;
+      border-radius: 2px;
+    }
+
+    .author-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.2);
+      padding: 8px 20px;
+      border-radius: 20px;
+      font-size: 13px;
+      margin-top: 15px;
+      backdrop-filter: blur(10px);
     }
 
     /* 通用标题样式 */
@@ -790,7 +872,7 @@
 
     .food-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(4, 1fr);
       gap: 25px;
       list-style: none;
     }
@@ -801,7 +883,7 @@
       overflow: hidden;
       box-shadow: var(--shadow);
       cursor: pointer;
-      height: 300px;
+      height: 220px;
     }
 
     .food-card img {
@@ -826,7 +908,7 @@
     }
 
     .food-overlay h4 {
-      font-size: 22px;
+      font-size: 20px;
       font-weight: 700;
       margin-bottom: 8px;
     }
@@ -1031,6 +1113,15 @@
         gap: 20px;
       }
       
+      .author-name {
+        font-size: 36px;
+      }
+      
+      .author-id {
+        font-size: 18px;
+        letter-spacing: 4px;
+      }
+      
       .goods-grid,
       .recommend-grid,
       .new-grid {
@@ -1051,7 +1142,7 @@
       
       .topic-grid,
       .food-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
       }
     }
 
@@ -1073,11 +1164,21 @@
         gap: 20px;
       }
       
+      .author-name {
+        font-size: 28px;
+      }
+      
+      .author-id {
+        font-size: 16px;
+        letter-spacing: 2px;
+      }
+      
       .goods-grid,
       .recommend-grid,
       .brand-grid,
       .category-right,
-      .new-grid {
+      .new-grid,
+      .food-grid {
         grid-template-columns: 1fr;
       }
       
@@ -1092,6 +1193,7 @@
   </style>
 </head>
 <body>
+
   <!-- 快捷导航 -->
   <div class="shortcut">
     <div class="wrapper">
@@ -1228,6 +1330,22 @@
     </div>
   </div>
 
+  <!-- ====== 学号姓名展示区域（新增，在Banner下方空白处）====== -->
+  <div class="author-showcase">
+    <div class="wrapper">
+      <div class="author-content">
+        <div class="author-label">Web Programming Technology</div>
+        <div class="author-name">范籽雯</div>
+        <div class="author-divider"></div>
+        <div class="author-id">24215220205</div>
+        <div class="author-badge">
+          <i class="fas fa-code"></i>
+          <span>实验作业 · 小兔鲜儿官网复现</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- 新鲜好物 -->
   <div class="goods wrapper">
     <div class="section-title">
@@ -1308,7 +1426,7 @@
     </ul>
   </div>
 
-  <!-- 新品首发（使用 new_goods 图片） -->
+  <!-- 新品首发 -->
   <div class="new-arrival">
     <div class="wrapper">
       <div class="section-title">
@@ -1378,7 +1496,7 @@
     </div>
   </div>
 
-  <!-- 生鲜分类（使用 fresh_goods 系列图片） -->
+  <!-- 生鲜分类 -->
   <div class="category-section wrapper">
     <div class="category-header">
       <div class="category-title">
@@ -1397,7 +1515,7 @@
     </div>
     <div class="category-content">
       <div class="category-left">
-        <img src="./uploads/fresh_goods_cover.png" alt="生鲜馆 - 茅台">
+        <img src="./uploads/fresh_goods_cover.png" alt="生鲜馆">
       </div>
       <div class="category-right">
         <div class="product-card">
@@ -1473,12 +1591,12 @@
         </div>
         <div class="product-card">
           <img src="./uploads/clothes2.png" alt="紫色毛衣">
-          <a href="#">JESSYLINE紫色针织开衫 蝴蝶结装饰 甜美风格</a>
+          <a href="#">JESSYLINE紫色针织开衫 蝴蝶结装饰</a>
           <div class="product-price"><i>¥</i>699.00</div>
         </div>
         <div class="product-card">
           <img src="./uploads/clothes3.png" alt="红色毛衣">
-          <a href="#">GIRDEAR哥弟高领羊毛衫 保暖舒适 秋冬必备</a>
+          <a href="#">GIRDEAR哥弟高领羊毛衫 保暖舒适</a>
           <div class="product-price"><i>¥</i>229.00</div>
         </div>
         <div class="product-card">
@@ -1488,7 +1606,7 @@
         </div>
         <div class="product-card">
           <img src="./uploads/clothes5.png" alt="连衣裙">
-          <a href="#">优雅黑色连衣裙 收腰设计 显瘦气质款</a>
+          <a href="#">优雅黑色连衣裙 收腰设计 显瘦气质</a>
           <div class="product-price"><i>¥</i>179.00</div>
         </div>
         <div class="product-card">
@@ -1498,7 +1616,7 @@
         </div>
         <div class="product-card">
           <img src="./uploads/clothes7.png" alt="帆布鞋">
-          <a href="#">高帮帆布鞋 卡通图案 青春潮流款</a>
+          <a href="#">高帮帆布鞋 卡通图案 青春潮流</a>
           <div class="product-price"><i>¥</i>99.99</div>
         </div>
         <div class="product-card">
@@ -1510,7 +1628,7 @@
     </div>
   </div>
 
-  <!-- 美食专区（使用 fresh 系列图片） -->
+  <!-- 美食专区 -->
   <div class="food-section">
     <div class="wrapper">
       <div class="section-title">
@@ -1823,7 +1941,7 @@
             <p>APP下载二维码</p>
           </div>
           <div class="qr-item">
-            <img src="./uploads/qrcode.png" alt="备用二维码">
+            <img src="./uploads/qrcode.png" alt="扫码领券">
             <p>扫码领券</p>
           </div>
         </div>
@@ -1839,12 +1957,16 @@
           <a href="#">商务合作</a>
           <a href="#">搜索推荐</a>
         </div>
-        <p>© 2024 24215220205范籽雯 版权所有 | 让新鲜触手可及</p>
+        <p>© 24215220205范籽雯</p>
       </div>
     </div>
   </div>
 
   <script>
+    // 控制台彩蛋
+    console.log("%c 24215220205范籽雯 ", "background:#00b894;color:#fff;font-size:20px;padding:10px;border-radius:5px;");
+    console.log("%c 小兔鲜儿官网实验作业 ", "color:#00b894;font-size:14px;");
+
     // 轮播图逻辑
     const pics = document.querySelectorAll('.pic li');
     const dots = document.querySelectorAll('.banner ol li');
